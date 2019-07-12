@@ -1,0 +1,16 @@
+<% provide(:title,"Lunch Manager") %>
+
+<div class="row">
+    <% @users.each do |user| %>
+    <div class="jumbotron">
+        <%= render user %>
+        <% unless had_meal_today? user %>
+            <%= form_for(:lunch,url:lunch_manager_path) do |f| %>
+                <%= f.hidden_field :user_id, value: user.id %>
+                <%= f.hidden_field :date, value: Time.now.strftime("%d %B %Y") %>
+                <%= f.submit "Confirm Lunch", class:"btn-primary btn", method: :post %>
+            <% end %>
+        <% end %>
+    </div>
+    <% end %>
+</div>

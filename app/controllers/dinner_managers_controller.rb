@@ -1,0 +1,2 @@
+class DinnerManagersController < ApplicationController
+end

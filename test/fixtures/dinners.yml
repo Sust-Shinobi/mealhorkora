@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hadmeal: false
+  year: 9.99
+  month: MyString
+  day: 9.99
+  user: one
+
+two:
+  hadmeal: false
+  year: 9.99
+  month: MyString
+  day: 9.99
+  user: two
