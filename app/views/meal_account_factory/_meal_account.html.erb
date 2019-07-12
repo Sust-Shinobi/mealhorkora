@@ -1,0 +1,24 @@
+<% unless @records.nil? %>
+<div class="jumbotron"><h1>Total : <%= @records.count %></h1></div>
+ <table style="width:100%" class="table">
+  <tr>
+    <th>Year</th>
+    <th>Month</th>
+    <th>Date</th>
+    <th>Name</th>
+  </tr>
+  <% day = nil %>
+  <% @records.each do |record| %>
+  <tr>
+    <td><%= record.year %></td>
+    <td><%= record.month%></td>
+    <% if day != record.day %>
+    <% day = record.day %>
+    <%end%>
+    <td><%= day %></td>
+    <td><%= User.find(record.user_id).name %></td>
+
+  </tr>
+  <% end %>
+</table>
+<% end %>
