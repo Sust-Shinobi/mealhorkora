@@ -15,7 +15,7 @@ class MealAccountFactoryController < ApplicationController
         else
             account = UserAccount.new
         end
-        @records = account.fetch_lunch_records(year,month)
+        @records = account.fetch_meal_records(year,month)
         render 'new'
     end
 end

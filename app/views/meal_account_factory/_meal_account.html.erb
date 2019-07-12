@@ -6,19 +6,28 @@
     <th>Month</th>
     <th>Date</th>
     <th>Name</th>
+    <th>Lunch</th>
+    <th>Dinner</th>
   </tr>
   <% day = nil %>
   <% @records.each do |record| %>
   <tr>
-    <td><%= record.year %></td>
-    <td><%= record.month%></td>
-    <% if day != record.day %>
-    <% day = record.day %>
-    <%end%>
-    <td><%= day %></td>
-    <td><%= User.find(record.user_id).name %></td>
-
+    <%= record %>
   </tr>
   <% end %>
 </table>
 <% end %>
+
+    <%
+=begin%>
+ <td><%= record.lunches.year %></td>
+    <td><%= record.lunches.month%></td>
+    <% if day != record.day %>
+    <% day = record.lunches.day %>
+    <%end%>
+    <td><%= record.lunches.day %></td>
+    <td><%= record.count %></td>
+    <td><%= "Yes" if record.hadlunch? %></td>
+    <td><%= "No" if record.haddinner? %></td> 
+<%
+=end%>

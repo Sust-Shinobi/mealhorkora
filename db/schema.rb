@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_11_171428) do
+ActiveRecord::Schema.define(version: 2019_07_12_134436) do
 
   create_table "dinners", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.decimal "year", precision: 10
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_07_11_171428) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "haddinner"
     t.index ["user_id"], name: "index_dinners_on_user_id"
   end
 
@@ -29,6 +30,7 @@ ActiveRecord::Schema.define(version: 2019_07_11_171428) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "hadlunch"
     t.index ["user_id"], name: "index_lunches_on_user_id"
   end
 
