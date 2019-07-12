@@ -17,6 +17,10 @@ class User < ApplicationRecord
                                                                            VALID_EMAIL_REGREX},
                                       uniqueness: {case_sensitive: false}
     has_secure_password
+    has_many :preferrences
+    validates :email, uniqueness:  {case_sensitive: false}
+    has_secure_password
+    validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
     def User.digest(string)
 	    cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :

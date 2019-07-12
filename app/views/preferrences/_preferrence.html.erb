@@ -1,6 +1,6 @@
-<li><span class="content">
-    <%= preferrence.content %>
-</span>
+<li><div>
+    <%= preferrence.id %>
+</div>
 <% if current_user?(preferrence.user) %>
       <%= link_to "delete", preferrence, method: :delete,
                   data: { confirm: "You sure?" } %>
