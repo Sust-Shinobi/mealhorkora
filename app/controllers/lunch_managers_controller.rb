@@ -6,7 +6,7 @@ class LunchManagersController < ApplicationController
 
     def create
         user = User.find(params[:lunch][:user_id])
-        unless ( helpers.had_meal_today?(user) && !user.nil?)
+        unless ( helpers.had_lunch_today?(user) && !user.nil?)
             lunch = user.lunches.build
             time = params[:lunch][:date].split(' ')
             params[:lunch][:day] = time.first

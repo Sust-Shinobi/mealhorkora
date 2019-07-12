@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get '/dashboard', to: "static_pages#dashboard"
   get '/lunch_manager', to: "lunch_managers#new"
   post '/lunch_manager', to: "lunch_managers#create"
+  get '/dinner_manager', to: "dinner_managers#new"
+  post '/dinner_manager', to: "dinner_managers#create"
   get '/manager_panel', to: "managers#new"
   get '/reports', to: "meal_account_factory#new"
   post '/reports', to: "meal_account_factory#create"

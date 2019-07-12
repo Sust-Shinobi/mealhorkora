@@ -1,5 +1,6 @@
 <% unless @dinnerrecords.nil? %>
 <h2><%= yield(:dinner_record_title) %></h2>
+<%= params[:account][:showall] %>
 <table style="width:100%" class="table">
   <tr>
     <th>Year</th>

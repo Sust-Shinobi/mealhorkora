@@ -10,7 +10,7 @@ class MealAccountFactoryController < ApplicationController
         account = MealAccount.new
         year = params[:account][:year]
         month = params[:account][:month]
-        if ( current_user.superuser? && params[:account][:isadmin] )
+        if ( current_user.superuser? && params[:account][:showall].to_i == 1)
             account = AdminAccount.new
         elsif logged_in?
             account = UserAccount.new

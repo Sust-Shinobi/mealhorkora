@@ -4,11 +4,15 @@
 
 <div class="row" style="margin:10px;">
     <%= form_for(:account,url:reports_path) do |f| %>
+    <% if current_user.superuser? %>
+    <%= f.label :showall, "Show All" %>
+    <%= f.check_box :showall, class: "check-box"  %>
+    <% end %>
     <%= f.select :year, ((Time.now.year-1)..(Time.now.year+1)), { }, class: "btn"%>
     <%= f.select :month, Date::MONTHNAMES[0..12], { }, class:"btn"%>
     <%= f.submit "Submit", class:"btn btn-primary" %>
     <% end %>
-
+    
     <%= render 'meal_account_factory/lunch_account' %>
     <%= render 'meal_account_factory/dinner_account' %>
 </div>
