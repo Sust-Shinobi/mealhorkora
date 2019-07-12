@@ -51,6 +51,12 @@ ActiveRecord::Schema.define(version: 2019_07_12_192444) do
     t.boolean "superuser"
     t.boolean "takes_lunch"
     t.boolean "takes_dinner"
+    t.string "city"
+    t.string "address"
+    t.string "profession"
+    t.string "religion"
+    t.string "phone_no"
+    t.date "date_of_birth"
   end
 
   add_foreign_key "dinners", "users"

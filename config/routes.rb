@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   get '/manager_panel', to: "managers#new"
   get '/reports', to: "meal_account_factory#new"
   post '/reports', to: "meal_account_factory#create"
+  get '/about', to: 'static_pages#about'
+  get '/contact', to: 'static_pages#contact'
   resources :users
 end

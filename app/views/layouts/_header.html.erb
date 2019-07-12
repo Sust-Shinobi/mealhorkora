@@ -7,7 +7,6 @@
     <li><%= link_to "Home", root_path %></li>
     <li><%= link_to "Dashboard", dashboard_path%></li>
     <% if !logged_in? %>
-    <li><%= link_to "SignUp", signup_path %></li>
     <li><%= link_to "SignIn", signin_path %></li>
     <% else %>
     <li><%= link_to "Sign Out", signout_path, method: :delete %></li>
