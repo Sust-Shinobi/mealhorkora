@@ -1,11 +1,14 @@
 <%provide(:title,"Meal Report")%>
+<%provide(:lunch_record_title,"Lunch Records")%>
+<%provide(:dinner_record_title,"Dinner Records")%>
 
-<div class="row">
+<div class="row" style="margin:10px;">
     <%= form_for(:account,url:reports_path) do |f| %>
-    <%= f.select :year, ((Time.now.year-1)..(Time.now.year+1)), { }, class: "form-control"%>
-    <%= f.select :month, Date::MONTHNAMES[0..12], { }, class:"form-control"%>
+    <%= f.select :year, ((Time.now.year-1)..(Time.now.year+1)), { }, class: "btn"%>
+    <%= f.select :month, Date::MONTHNAMES[0..12], { }, class:"btn"%>
     <%= f.submit "Submit", class:"btn btn-primary" %>
     <% end %>
 
-    <%= render 'meal_account_factory/meal_account' %>
+    <%= render 'meal_account_factory/lunch_account' %>
+    <%= render 'meal_account_factory/dinner_account' %>
 </div>

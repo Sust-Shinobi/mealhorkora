@@ -10,12 +10,13 @@ class MealAccountFactoryController < ApplicationController
         account = MealAccount.new
         year = params[:account][:year]
         month = params[:account][:month]
-        if current_user.superuser?
+        if ( current_user.superuser? && params[:account][:isadmin] )
             account = AdminAccount.new
-        else
+        elsif logged_in?
             account = UserAccount.new
         end
-        @records = account.fetch_meal_records(year,month)
+        @lunchrecords = account.fetch_lunch_records(year,month,current_user.id)
+        @dinnerrecords = account.fetch_dinner_records(year,month,current_user.id)
         render 'new'
     end
 end

@@ -1,0 +1,20 @@
+<% unless @dinnerrecords.nil? %>
+<h2><%= yield(:dinner_record_title) %></h2>
+<table style="width:100%" class="table">
+  <tr>
+    <th>Year</th>
+    <th>Month</th>
+    <th>Date</th>
+    <th>Name</th>
+  </tr>
+  <% day = nil %>
+  <% @dinnerrecords.each do |record| %>
+  <tr>
+    <td><%= record.year %></td>
+    <td><%= record.month %></td>
+    <td><%= record.day %></td>
+    <td><%= User.find(record.user_id).name %></td>
+  </tr>
+  <% end %>
+</table>
+<% end %>
