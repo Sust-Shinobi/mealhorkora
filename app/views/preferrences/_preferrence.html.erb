@@ -1,8 +1,9 @@
 <li><div>
     <%= preferrence.disliked_item %>
+  <% if current_user?(preferrence.user) %>
+    <%= link_to "delete", preferrence, method: :delete,
+                data: { confirm: "You sure?" } %>
+  <% end %>
 </div>
-<% if current_user?(preferrence.user) %>
-      <%= link_to "delete", preferrence, method: :delete,
-                  data: { confirm: "You sure?" } %>
-    <% end %>
+
 </li>

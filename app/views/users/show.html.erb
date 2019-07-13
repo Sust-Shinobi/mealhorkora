@@ -7,7 +7,8 @@
       </h1>
     </section>
     <div class="container">
-      <div class="col-md-6">
+      <div class="col-md-4">
+        <h4><b>User-info</b></h4>
         <h4>email: <%= @user.email %></h4>
         <h4>Phone_no: <%= @user.phone_no %></h4>
         <h4>Religion: <%= @user.religion %></h4>
@@ -16,7 +17,8 @@
         <h4>Address: <%= @user.address %></h4>
         <h4><%= link_to "Update profile", edit_user_path(current_user) %></h4>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
+        <h4><b>Account</b></h4>
         <h4>Account balance: <%= "#" %></h4>
         <h4>Expense this month: <%= "#" %></h4>
         <h4>Total meals taken(this month): <%= "#" %></h4>
@@ -25,6 +27,9 @@
 <!--        <span>Order lunch</span>-->
         <%# end %>
       </div>
+      <div class="col-md-4">
+        <h4><b>Preferences</b></h4>
+        <%= render @preferrences %>
+      </div>
     </div>
-    <%= render @preferrences %>
 </div>

@@ -7,6 +7,7 @@ class PreferrencesController < ApplicationController
     def create
         @preferrence = current_user.preferrences.build(preferrence_params)
         @preferrence.save
+        redirect_to current_user
     end
     def destroy
     @preferrence.destroy

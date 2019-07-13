@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   post '/reports', to: "meal_account_factory#create"
   get '/about', to: 'static_pages#about'
   get '/contact', to: 'static_pages#contact'
+  get '/preference',  to: 'static_pages#preference'
   resources :users
   resources :preferrences, only: [:create, :destroy]
 end
