@@ -2,11 +2,16 @@
 <div class="row">
     <div class="col-md-4">
     <ul>
+        <% if !current_user.superuser? %>
+        <li><%= link_to "Reports", reports_path %></li>
+        <li><%= link_to "Add preference", preference_path %></li>
+        <% else %>
         <li><%= link_to "Managers Panel", manager_panel_path %></li>
         <li><%= link_to "Lunch Manager", lunch_manager_path %></li>
         <li><%= link_to "Reports", reports_path %></li>
+        <li><%= link_to "Dinner Manager", dinner_manager_path %></li>
         <li><%= link_to "Add preference", preference_path %></li>
-
+        <% end %>
     </ul>
     </div>
 </div>

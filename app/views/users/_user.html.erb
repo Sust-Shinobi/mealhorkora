@@ -1,9 +1,15 @@
 <% provide(:title, user.name) %>
 <div class="row">
-    <section class="user_info col-md-4">
+    <section class="col-md-4">
       <h4>
         <%= gravatar_for user %>
         <%= user.name %>
       </h4>
+      <h4><%= user.address %></h4>
     </section>
+    <h4><b>Preferences</b></h4>
+    <div class="col-md-6">
+      <%=  render user.preferrences %>
+    </div>
+
 </div>
