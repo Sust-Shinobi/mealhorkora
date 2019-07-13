@@ -1,5 +1,5 @@
 <li><div>
-    <%= preferrence.id %>
+    <%= preferrence.disliked_item %>
 </div>
 <% if current_user?(preferrence.user) %>
       <%= link_to "delete", preferrence, method: :delete,

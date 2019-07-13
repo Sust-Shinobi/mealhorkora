@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_12_222829) do
+ActiveRecord::Schema.define(version: 2019_07_12_192444) do
 
   create_table "dinners", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.decimal "year", precision: 10
@@ -52,11 +52,11 @@ ActiveRecord::Schema.define(version: 2019_07_12_222829) do
     t.boolean "takes_lunch"
     t.boolean "takes_dinner"
     t.string "city"
-    t.text "address"
+    t.string "address"
     t.string "profession"
     t.string "religion"
     t.string "phone_no"
-    t.datetime "date_of_birth"
+    t.date "date_of_birth"
   end
 
   add_foreign_key "dinners", "users"
