@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
+  get '/status', to:"static_pages#status"
+  post '/status', to:"status#update"
   get '/preference', to: "static_pages#preference"
   get '/signup', to: "users#new"
   post '/signup', to: "users#create"
