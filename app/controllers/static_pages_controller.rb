@@ -14,6 +14,10 @@ class StaticPagesController < ApplicationController
     end
   end
 
+  def status
+    @user = current_user
+  end
+
   def about
   end
 

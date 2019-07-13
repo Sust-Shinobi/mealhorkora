@@ -1,0 +1,12 @@
+<% if logged_in? %>
+  <%= form_for(:user,url:status_path) do |f| %>
+
+    <%= f.label :takes_lunch %>
+    <%= f.check_box :takes_lunch,checked: @user.takes_lunch? %>
+
+    <%= f.label :takes_dinner %>
+    <%= f.check_box :takes_dinner, checked: @user.takes_dinner?%>
+
+    <%= f.submit "Update" %>
+  <% end %>
+<% end %>
