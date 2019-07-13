@@ -4,6 +4,9 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
+        <% if @user.superuser? %>
+           (Admin)
+        <% end %>
       </h1>
     </section>
     <div class="container">

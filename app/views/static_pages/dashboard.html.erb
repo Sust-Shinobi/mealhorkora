@@ -1,16 +1,16 @@
 <h1>Dashboard</h1>
 <div class="row">
     <div class="col-md-4">
-    <ul>
+    <ul class="list-group">
+      <li class="list-group-item"><%= link_to "Add preference", preference_path %></li>
+      <li class="list-group-item"><%= link_to "Meal status", status_path %></li>
         <% if !current_user.superuser? %>
-        <li><%= link_to "Reports", reports_path %></li>
-        <li><%= link_to "Add preference", preference_path %></li>
+        <li class="list-group-item"><%= link_to "Reports", reports_path %></li>
         <% else %>
-        <li><%= link_to "Managers Panel", manager_panel_path %></li>
-        <li><%= link_to "Lunch Manager", lunch_manager_path %></li>
-        <li><%= link_to "Reports", reports_path %></li>
-        <li><%= link_to "Dinner Manager", dinner_manager_path %></li>
-        <li><%= link_to "Add preference", preference_path %></li>
+        <li class="list-group-item"><%= link_to "Managers Panel", manager_panel_path %></li>
+        <li class="list-group-item"><%= link_to "Lunch Manager", lunch_manager_path %></li>
+        <li class="list-group-item"><%= link_to "Dinner Manager", dinner_manager_path %></li>
+        <li class="list-group-item"><%= link_to "Reports", reports_path %></li>
         <% end %>
     </ul>
     </div>
