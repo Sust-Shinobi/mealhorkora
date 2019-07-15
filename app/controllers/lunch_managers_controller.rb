@@ -1,5 +1,5 @@
 class LunchManagersController < ApplicationController
-    
+    before_action :admin_user, only: [:new,:create,:destroy]
     def new
         @users = User.where(takes_lunch: 1)
     end
@@ -24,6 +24,13 @@ class LunchManagersController < ApplicationController
 
     def lunch_params
         params.require(:lunch).permit(:day,:month,:year)
+    end
+
+    def admin_user
+        if current_user.superuser?
+        return current_user
+        else redirect_to root_url
+        end
     end
 
 end
