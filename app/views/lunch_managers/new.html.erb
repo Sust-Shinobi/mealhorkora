@@ -1,9 +1,9 @@
 <% provide(:title,"Lunch Manager") %>
 <div class="row">
-    <%= render @meals %>
     <% @users.each do |user| %>
     <div class="jumbotron">
         <%= render user %>
+        <%= render @lunch_meals %>
         <% unless had_lunch_today? user %>
             <%= form_for(:lunch,url:lunch_manager_path) do |f| %>
                 <%= f.hidden_field :user_id, value: user.id %>

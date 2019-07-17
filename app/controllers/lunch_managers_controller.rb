@@ -2,7 +2,7 @@ class LunchManagersController < ApplicationController
     before_action :admin_user, only: [:new,:create,:destroy]
     def new
         @users = User.where(takes_lunch: 1)
-        @meals = LunchMeal.all
+        @lunch_meals = LunchMeal.all
     end
 
     def create
@@ -23,16 +23,16 @@ class LunchManagersController < ApplicationController
 
 
     def show_meal
-        @meals = LunchMeal.all
+        @lunch_meals = LunchMeal.all
     end
 
     def new_meal
-        @meal = LunchMeal.new
+        @lunch_meal = LunchMeal.new
     end
 
     def create_meal
-        items = params[:meal][:items]
-        cost = params[:meal][:cost]
+        items = params[:lunch_meal][:items]
+        cost = params[:lunch_meal][:cost]
         LunchMeal.create!(items: items, cost: cost)
     end
 
