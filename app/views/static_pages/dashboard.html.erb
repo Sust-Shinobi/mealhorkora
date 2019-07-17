@@ -7,7 +7,7 @@
         <% if !current_user.superuser? %>
         <li class="list-group-item"><%= link_to "Reports", reports_path %></li>
         <% else %>
-        <li class="list-group-item"><%= link_to "Managers Panel", managers_panel_path %></li>
+        <li class="list-group-item"><%= link_to "Managers Panel", manager_panel_path %></li>
         <li class="list-group-item"><%= link_to "Lunch Manager", lunch_manager_path %></li>
         <li class="list-group-item"><%= link_to "Dinner Manager", dinner_manager_path %></li>
         <li class="list-group-item"><%= link_to "Reports", reports_path %></li>

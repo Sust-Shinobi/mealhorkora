@@ -15,7 +15,7 @@ class ManagersController < ApplicationController
         @user = User.find(params[:id])
         if @user.update_attributes(superuser: 0)
             flash[:success] = @user.name+" has been removed from the managers panel"
-            redirect_to managers_panel_path
+            redirect_to manager_panel_path
         end
     end
 end

@@ -6,6 +6,7 @@
         <%= render user %>
         <% unless had_dinner_today? user %>
             <%= form_for(:dinner,url:dinner_manager_path) do |f| %>
+                <%= render @dinner_meals %>
                 <%= f.hidden_field :user_id, value: user.id %>
                 <%= f.hidden_field :date, value: Time.now.strftime("%d %B %Y") %>
                 <%= f.submit "Confirm Dinner", class:"btn-primary btn", method: :post %>

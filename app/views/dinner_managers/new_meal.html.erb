@@ -1,0 +1,8 @@
+<div class="row">
+  <%= form_for(:dinner_meal,url:'/dinner_managers/create_meal') do |f| %>
+    <%= f.text_area :items %>
+    <br/>
+    <%= f.number_field :cost %>
+    <%= f.submit "Submit", disable_with: 'Submiting...', action: "create_meal" %>
+  <% end %>
+</div>
