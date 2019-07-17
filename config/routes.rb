@@ -13,13 +13,14 @@ Rails.application.routes.draw do
   post '/lunch_manager', to: "lunch_managers#create"
   get '/dinner_manager', to: "dinner_managers#new"
   post '/dinner_manager', to: "dinner_managers#create"
-  get '/manager_panel', to: "managers#new"
+  get '/managers_panel', to: "managers#new"
   get '/reports', to: "meal_account_factory#new"
   post '/reports', to: "meal_account_factory#create"
   get '/about', to: 'static_pages#about'
   get '/contact', to: 'static_pages#contact'
   get '/preference',  to: 'static_pages#preference'
   post '/users',  to: 'managers#create_admin'
+  post '/managers_panel', to: 'managers#remove_admin'
   resources :users
   resources :preferrences, only: [:create, :destroy]
 end
