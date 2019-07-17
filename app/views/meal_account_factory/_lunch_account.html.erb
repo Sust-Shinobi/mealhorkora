@@ -6,6 +6,8 @@
     <th>Month</th>
     <th>Date</th>
     <th>Name</th>
+    <th>Items</th>
+    <th>Cost</th>
   </tr>
   <% day = nil %>
   <% @lunchrecords.each do |record| %>
@@ -14,6 +16,8 @@
     <td><%= record.month %></td>
     <td><%= record.day %></td>
     <td><%= User.find(record.user_id).name %></td>
+    <td><%= record.lunch_meal_id %></td>
+    <td>none</td>
   </tr>
   <% end %>
 </table>
