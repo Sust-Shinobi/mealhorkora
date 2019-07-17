@@ -1,6 +1,6 @@
 <% provide(:title,"Lunch Manager") %>
-
 <div class="row">
+    <%= render @meals %>
     <% @users.each do |user| %>
     <div class="jumbotron">
         <%= render user %>

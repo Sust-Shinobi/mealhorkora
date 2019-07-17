@@ -2,6 +2,7 @@ class LunchManagersController < ApplicationController
     before_action :admin_user, only: [:new,:create,:destroy]
     def new
         @users = User.where(takes_lunch: 1)
+        @meals = LunchMeal.all
     end
 
     def create
