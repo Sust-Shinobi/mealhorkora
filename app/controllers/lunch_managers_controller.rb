@@ -7,6 +7,8 @@ class LunchManagersController < ApplicationController
 
     def create
         user = User.find(params[:lunch][:user_id])
+        lunch_meal_id = params[:lunch_meal_id]
+        params[:lunch][:lunch_meal_id] = lunch_meal_id
         unless ( helpers.had_lunch_today?(user) && !user.nil?)
             lunch = user.lunches.build
             time = params[:lunch][:date].split(' ')
@@ -39,7 +41,7 @@ class LunchManagersController < ApplicationController
     private
 
     def lunch_params
-        params.require(:lunch).permit(:day,:month,:year)
+        params.require(:lunch).permit(:day,:month,:year,:lunch_meal_id)
     end
 
     def admin_user

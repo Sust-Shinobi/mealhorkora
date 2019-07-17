@@ -1,10 +1,13 @@
 class DinnerManagersController < ApplicationController
     def new
         @users = User.where(takes_dinner: 1)
+        @dinner_meals = DinnerMeal.all
     end
 
     def create
         user = User.find(params[:dinner][:user_id])
+        dinner_meal_id = params[:dinner_meal_id]
+        params[:dinner][:dinner_meal_id] = dinner_meal_id
         unless ( helpers.had_dinner_today?(user) && !user.nil?)
             dinner = user.dinners.build
             time = params[:dinner][:date].split(' ')
@@ -25,11 +28,18 @@ class DinnerManagersController < ApplicationController
     end
 
     def create_meal
+        items = params[:dinner_meal][:items]
+        cost = params[:dinner_meal][:cost]
+        DinnerMeal.create!(items: items, cost: cost)
+    end
+
+    def new_meal
+        @dinner_meal = DinnerMeal.new
     end
 
     private
 
     def dinner_params
-        params.require(:dinner).permit(:day,:month,:year,:haddinner)
+        params.require(:dinner).permit(:day,:month,:year,:haddinner,:dinner_meal_id)
     end
 end

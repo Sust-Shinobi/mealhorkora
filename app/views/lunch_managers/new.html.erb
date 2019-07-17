@@ -3,9 +3,10 @@
     <% @users.each do |user| %>
     <div class="jumbotron">
         <%= render user %>
-        <%= render @lunch_meals %>
         <% unless had_lunch_today? user %>
             <%= form_for(:lunch,url:lunch_manager_path) do |f| %>
+
+                <%= render @lunch_meals %>
                 <%= f.hidden_field :user_id, value: user.id %>
                 <%= f.hidden_field :date, value: Time.now.strftime("%d %B %Y") %>
                 <%= f.submit "Confirm Lunch", class:"btn-primary btn", method: :post %>
