@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_12_192444) do
+ActiveRecord::Schema.define(version: 2019_07_16_192740) do
+
+  create_table "dinner_meals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "items"
+    t.float "cost"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "dinners", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.decimal "year", precision: 10
@@ -20,7 +27,16 @@ ActiveRecord::Schema.define(version: 2019_07_12_192444) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "haddinner"
+    t.bigint "dinner_meal_id"
+    t.index ["dinner_meal_id"], name: "index_dinners_on_dinner_meal_id"
     t.index ["user_id"], name: "index_dinners_on_user_id"
+  end
+
+  create_table "lunch_meals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "items"
+    t.float "cost"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "lunches", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -31,6 +47,8 @@ ActiveRecord::Schema.define(version: 2019_07_12_192444) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "hadlunch"
+    t.bigint "lunch_meal_id"
+    t.index ["lunch_meal_id"], name: "index_lunches_on_lunch_meal_id"
     t.index ["user_id"], name: "index_lunches_on_user_id"
   end
 
@@ -52,14 +70,16 @@ ActiveRecord::Schema.define(version: 2019_07_12_192444) do
     t.boolean "takes_lunch"
     t.boolean "takes_dinner"
     t.string "city"
-    t.string "address"
+    t.datetime "date_of_birth"
+    t.text "address"
     t.string "profession"
-    t.string "religion"
     t.string "phone_no"
-    t.date "date_of_birth"
+    t.string "religion"
   end
 
+  add_foreign_key "dinners", "dinner_meals"
   add_foreign_key "dinners", "users"
+  add_foreign_key "lunches", "lunch_meals"
   add_foreign_key "lunches", "users"
   add_foreign_key "preferrences", "users"
 end

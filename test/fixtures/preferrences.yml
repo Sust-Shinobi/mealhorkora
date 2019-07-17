@@ -2,8 +2,8 @@
 
 one:
   disliked_item: MyString
-  user: one
+  user: 
 
 two:
   disliked_item: MyString
-  user: two
+  user: 

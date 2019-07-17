@@ -20,6 +20,13 @@ class DinnerManagersController < ApplicationController
     def destroy
     end
 
+
+    def show_meal
+    end
+
+    def create_meal
+    end
+
     private
 
     def dinner_params

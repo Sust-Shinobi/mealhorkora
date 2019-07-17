@@ -19,6 +19,9 @@ Rails.application.routes.draw do
   get '/about', to: 'static_pages#about'
   get '/contact', to: 'static_pages#contact'
   get '/preference',  to: 'static_pages#preference'
+
+  get 'lunch_managers/new_meal'
+  post 'lunch_managers/create_meal'
   resources :users
   resources :preferrences, only: [:create, :destroy]
 end

@@ -20,6 +20,21 @@ class LunchManagersController < ApplicationController
     def destroy
     end
 
+
+    def show_meal
+        @meals = LunchMeal.all
+    end
+
+    def new_meal
+        @meal = LunchMeal.new
+    end
+
+    def create_meal
+        items = params[:meal][:items]
+        cost = params[:meal][:cost]
+        LunchMeal.create!(items: items, cost: cost)
+    end
+
     private
 
     def lunch_params

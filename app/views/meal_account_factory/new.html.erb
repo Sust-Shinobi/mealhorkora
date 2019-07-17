@@ -6,10 +6,10 @@
     <%= form_for(:account,url:reports_path) do |f| %>
     <% if current_user.superuser? %>
     <%= f.check_box :showall, class: "check-box"  %>
-    <h4 style="color:red;"><%= f.label :showall, "Show All" %></h4>
+    <%= f.label :showall, "Show All" %>
     <% end %>
     <br/>
-    <%= f.date_select :expired,:prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } %>
+    <%= f.date_select :expired,:prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } , class: "form-control" %>
     <%= f.submit "Submit", class:"btn btn-primary" %>
     <% end %>
     

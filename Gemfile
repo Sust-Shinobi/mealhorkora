@@ -9,6 +9,7 @@ gem 'bcrypt'
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'jquery-rails'
 gem 'will_paginate'
+gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use mysql as the database for Active Record
