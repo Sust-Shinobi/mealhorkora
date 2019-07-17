@@ -31,6 +31,7 @@ class DinnerManagersController < ApplicationController
         items = params[:dinner_meal][:items]
         cost = params[:dinner_meal][:cost]
         DinnerMeal.create!(items: items, cost: cost)
+        redirect_to dinner_manager_path
     end
 
     def new_meal

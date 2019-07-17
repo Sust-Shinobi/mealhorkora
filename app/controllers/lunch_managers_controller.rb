@@ -36,6 +36,7 @@ class LunchManagersController < ApplicationController
         items = params[:lunch_meal][:items]
         cost = params[:lunch_meal][:cost]
         LunchMeal.create!(items: items, cost: cost)
+        redirect_to lunch_manager_path
     end
 
     private

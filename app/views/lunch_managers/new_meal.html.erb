@@ -1,5 +1,5 @@
 <div class="row">
-    <%= form_for(:lunch_meal,url:'/lunch_managers/create_meal') do |f| %>
+    <%= form_for(:lunch_meal,url: create_new_lunch_menu_path) do |f| %>
         <%= f.text_area :items %>
         <br/>
         <%= f.number_field :cost %>    

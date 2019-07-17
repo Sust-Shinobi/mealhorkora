@@ -22,11 +22,10 @@ Rails.application.routes.draw do
   post '/users',  to: 'managers#create_admin'
   post '/manager_panel', to: 'managers#remove_admin'
 
-  get 'lunch_managers/show_meal'
-  get 'lunch_managers/new_meal'
-  post 'lunch_managers/create_meal'
-  get 'dinner_managers/new_meal'
-  post 'dinner_managers/create_meal'
+  get  '/create_new_lunch_menu',   to: 'lunch_managers#new_meal'
+  post '/create_new_lunch_menu' ,  to: 'lunch_managers#create_meal'
+  get  '/create_new_dinner_menu', to: 'dinner_managers#new_meal'
+  post '/create_new_dinner_menu', to: 'dinner_managers#create_meal'
   resources :users
   resources :preferrences, only: [:create, :destroy]
 end
