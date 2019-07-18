@@ -7,4 +7,12 @@ module LunchManagersHelper
         day: time.strftime("%d").to_i)
         meal.any?
     end
+
+    def generate_cost(lunchrecords)
+        cost = 0
+        lunchrecords.each do |lunch|
+            cost += lunch.lunch_meal.cost
+        end
+        return cost
+    end
 end

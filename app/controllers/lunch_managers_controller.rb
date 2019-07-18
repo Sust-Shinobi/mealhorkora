@@ -16,8 +16,11 @@ class LunchManagersController < ApplicationController
             params[:lunch][:month] = time.second
             params[:lunch][:year] = time.third
             lunch.update_attributes(lunch_params)
+            user.update_balance(user.balance - LunchMeal.find(lunch_meal_id).cost)
+            user.save
             redirect_back_or lunch_manager_path
         end
+
     end
 
     def destroy

@@ -1,5 +1,7 @@
 <% unless @lunchrecords.nil? %>
 <h2><%= yield(:lunch_record_title) %></h2>
+<h2>Total: <%= @lunchrecords.count %></h2>
+<h2>Total cost: <%= generate_cost(@lunchrecords) %></h2>
 <table style="width:100%" class="table">
   <tr>
     <th>Year</th>
@@ -9,7 +11,6 @@
     <th>Items</th>
     <th>Cost</th>
   </tr>
-  <% day = nil %>
   <% @lunchrecords.each do |record| %>
   <tr>
     <td><%= record.year %></td>

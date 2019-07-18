@@ -44,7 +44,7 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find(params[:id])   
-        @preferrences = current_user.preferrences
+        @preferrences = @user.preferrences
     end
 
     private

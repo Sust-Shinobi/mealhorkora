@@ -27,5 +27,9 @@ class User < ApplicationRecord
     def all_preference
         preferrences
     end
+
+    def update_balance(new_balance)
+        self.balance = new_balance
+    end
     
 end

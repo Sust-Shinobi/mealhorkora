@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_16_192740) do
+ActiveRecord::Schema.define(version: 2019_07_18_104927) do
 
   create_table "dinner_meals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "items"
@@ -30,6 +30,16 @@ ActiveRecord::Schema.define(version: 2019_07_16_192740) do
     t.bigint "dinner_meal_id"
     t.index ["dinner_meal_id"], name: "index_dinners_on_dinner_meal_id"
     t.index ["user_id"], name: "index_dinners_on_user_id"
+  end
+
+  create_table "expenses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "year"
+    t.string "month"
+    t.decimal "day", precision: 10
+    t.string "item"
+    t.decimal "cost", precision: 10
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "lunch_meals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -75,6 +85,7 @@ ActiveRecord::Schema.define(version: 2019_07_16_192740) do
     t.string "profession"
     t.string "phone_no"
     t.string "religion"
+    t.decimal "balance", precision: 10
   end
 
   add_foreign_key "dinners", "dinner_meals"
