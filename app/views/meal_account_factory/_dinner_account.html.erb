@@ -1,5 +1,6 @@
 <% unless @dinnerrecords.nil? %>
 <h2><%= yield(:dinner_record_title) %></h2>
+<h2>Total: <%= @dinnerrecords.count %>        Total cost: <%= generate_dinner_cost(@dinnerrecords) %></h2>
 <table style="width:100%" class="table">
   <tr>
     <th>Year</th>
@@ -16,8 +17,8 @@
     <td><%= record.month %></td>
     <td><%= record.day %></td>
     <td><%= User.find(record.user_id).name %></td>
-    <td><%= DinnerMeal.find(record.lunch_meal_id).items %></td>
-    <td><%= DinnerMeal.find(record.lunch_meal_id).cost %></td>
+    <td><%= DinnerMeal.find(record.dinner_meal_id).items %></td>
+    <td><%= DinnerMeal.find(record.dinner_meal_id).cost %></td>
   
   </tr>
   <% end %>

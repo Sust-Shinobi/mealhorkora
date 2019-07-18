@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: phpmyadmin
-  password: 7428842627
+  password: 2016831026
   socket: /var/run/mysqld/mysqld.sock
 
 development:

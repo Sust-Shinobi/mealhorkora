@@ -1,6 +1,6 @@
 class ManagersController < ApplicationController
     def new
-        @users = User.all
+        @users = User.paginate(page: params[:page]).where(superuser: 1)
     end
 
     def create_admin

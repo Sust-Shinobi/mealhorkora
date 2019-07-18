@@ -15,9 +15,11 @@ class LunchManagersController < ApplicationController
             params[:lunch][:day] = time.first
             params[:lunch][:month] = time.second
             params[:lunch][:year] = time.third
+            params[:lunch][:hadlunch] = true
             lunch.update_attributes(lunch_params)
-            user.update_balance(user.balance - LunchMeal.find(lunch_meal_id).cost)
-            user.save
+            # balance = user.balance - LunchMeal.find(lunch_meal_id).cost
+            # user.update_attributes(balance: balance)
+            # user.save
             redirect_back_or lunch_manager_path
         end
 
@@ -45,7 +47,7 @@ class LunchManagersController < ApplicationController
     private
 
     def lunch_params
-        params.require(:lunch).permit(:day,:month,:year,:lunch_meal_id)
+        params.require(:lunch).permit(:day,:month,:year,:hadlunch,:lunch_meal_id)
     end
 
     def admin_user
