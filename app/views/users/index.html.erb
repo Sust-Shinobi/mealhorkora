@@ -12,7 +12,7 @@
       <% if user.superuser? %>
         <h4><small><mark>(admin)</mark></small></h4>
         <% else %>
-        <h5>(<%= link_to "make admin", users_path(user,:id => user.id),  method: :post,
+        <h5>(<%= link_to "make admin", newadmin_path(:id => user.id),  method: :post,
                          data: {confirm: "You sure?"} %>)</h5>
       <% end %>
     </li>

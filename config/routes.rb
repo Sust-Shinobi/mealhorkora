@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get '/about', to: 'static_pages#about'
   get '/contact', to: 'static_pages#contact'
   get '/preference',  to: 'static_pages#preference'
-  post '/users',  to: 'managers#create_admin'
+  post '/newadmin', to: 'managers#create_admin'
   post '/manager_panel', to: 'managers#remove_admin'
 
   get  '/create_new_lunch_menu',   to: 'lunch_managers#new_meal'

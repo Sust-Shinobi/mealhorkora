@@ -16,8 +16,8 @@
     <td><%= record.month %></td>
     <td><%= record.day %></td>
     <td><%= User.find(record.user_id).name %></td>
-    <td><%= record.lunch_meal_id %></td>
-    <td>none</td>
+    <td><%= LunchMeal.find(record.lunch_meal_id).items %></td>
+    <td><%= LunchMeal.find(record.lunch_meal_id).cost %></td>
   </tr>
   <% end %>
 </table>

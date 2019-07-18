@@ -7,10 +7,6 @@
 # Ignore bundler config.
 /.bundle
 
-#ignore this files
-/config/database.yml
-/.idea/*
-/Gemfile
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -30,6 +26,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-Gemfile
 config/database.yml
 .idea/workspace.xml
+Gemfile
