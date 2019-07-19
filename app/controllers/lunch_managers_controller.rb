@@ -15,23 +15,25 @@ class LunchManagersController < ApplicationController
             params[:lunch][:day] = time.first
             params[:lunch][:month] = time.second
             params[:lunch][:year] = time.third
-            if lunch.update_attributes(lunch_params)
-                if user.balance.nil?
-                user.update_balance(-LunchMeal.find(lunch_meal_id).cost)
+            if !user.balance.nil?
+                if user.balance>300
+                    if lunch.update_attributes(lunch_params)
+                        user.update_balance(user.balance-LunchMeal.find(lunch_meal_id).cost)
+                        flash[:success] = "Lunch confirmed"
+                    end
                 else
-                user.update_balance(user.balance-LunchMeal.find(lunch_meal_id).cost)
+                    flash[:danger] = "Insufficient account balance"
                 end
-                user.save
-                redirect_back_or lunch_manager_path
+            else
+                flash[:danger] = "Insufficient account balance"
             end
 
         end
-
+        redirect_back_or lunch_manager_path
     end
 
     def destroy
     end
-
 
     def show_meal
         @lunch_meals = LunchMeal.all
