@@ -25,8 +25,8 @@ Rails.application.routes.draw do
   post '/add_expense',              to: 'expenses#create'
   get '/show_expense',              to: 'expenses#show_blank'
   post '/show_expense',             to: 'expenses#show'
-  get '/update_balance',            to: 'users#balance_update'
-
+  get '/update_balance',            to: 'managers#update_balance'
+  post '/update_balance',            to: 'managers#setbalance'
 
   get  '/create_new_lunch_menu',    to: 'lunch_managers#new_meal'
   post '/create_new_lunch_menu' ,   to: 'lunch_managers#create_meal'
