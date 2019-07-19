@@ -19,6 +19,7 @@ class LunchManagersController < ApplicationController
                 if user.balance>300
                     if lunch.update_attributes(lunch_params)
                         user.update_balance(user.balance-LunchMeal.find(lunch_meal_id).cost)
+                        user.save!
                         flash[:success] = "Lunch confirmed"
                     end
                 else
