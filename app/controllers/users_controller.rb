@@ -61,10 +61,6 @@ class UsersController < ApplicationController
         end
     end
 
-    def balance_update
-
-    end
-
     private
 
     def correct_user

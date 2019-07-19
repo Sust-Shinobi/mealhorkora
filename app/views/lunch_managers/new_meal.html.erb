@@ -11,6 +11,9 @@
         <br/>
         <%= f.label :cost %>
         <%= f.number_field :cost, class: 'form-control' %>    
+        <span class="picture">
+        <%= f.file_field :picture %>
+        </span>
         <%= f.submit "Submit", disable_with: 'Submiting...', action: "create_meal", class: "btn btn-danger" %>
     </div>
     <% end %>

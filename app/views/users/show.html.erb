@@ -33,10 +33,4 @@
         <%= render @preferrences %>
       </div>
     </div>
-  <% if current_user.superuser? %>
-  <div class="text-right">
-    <%= button_to "Update balance", update_balance_path, method: :get, class: 'btn btn-primary'%>
-  </div>
- <% end %>
-
 </div>

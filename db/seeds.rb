@@ -38,5 +38,6 @@ User.create!(name:  name,
       address: address,
       religion: religion,
       takes_lunch: true,
+      balance: 0,
       takes_dinner: true )
 end

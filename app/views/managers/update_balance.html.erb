@@ -1,0 +1,7 @@
+<%= form_for(:balance) do |f| %>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+    <%= f.label :balance %>
+    <%= f.number_field :balance %>
+    <%= f.submit "Update" %>
+<% end %>
