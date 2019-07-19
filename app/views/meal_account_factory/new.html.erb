@@ -9,7 +9,8 @@
     <%= f.label :showall, "Show All" %>
     <% end %>
     <br/>
-    <%= f.date_select :expired,:prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } , class: "form-control" %>
+    <%= f.date_select :expired,:prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } ,
+                      class: "form-control" %>
     <%= f.submit "Submit", class:"btn btn-primary" %>
     <% end %>
     

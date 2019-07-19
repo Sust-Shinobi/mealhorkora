@@ -15,5 +15,5 @@ class UserAccount < MealAccount
             records = Dinner.where(year: year,month: month,user_id: user_id)
         end
             return records
-        end
+    end
 end

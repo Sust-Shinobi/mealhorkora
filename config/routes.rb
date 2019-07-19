@@ -23,7 +23,8 @@ Rails.application.routes.draw do
   post '/manager_panel',            to: 'managers#remove_admin'
   get  '/add_expense',              to: 'expenses#new'
   post '/add_expense',              to: 'expenses#create'
-  get '/show_expense',              to: 'expenses#show'
+  get '/show_expense',              to: 'expenses#show_blank'
+  post '/show_expense',             to: 'expenses#show'
   get '/update_balance',            to: 'users#balance_update'
 
 

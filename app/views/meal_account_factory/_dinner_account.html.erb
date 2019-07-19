@@ -1,6 +1,6 @@
 <% unless @dinnerrecords.nil? %>
 <h2><%= yield(:dinner_record_title) %></h2>
-<h2>Total: <%= @dinnerrecords.count %>        Total cost: <%= generate_dinner_cost(@dinnerrecords) %></h2>
+  <h2><pre>Total: <%= @dinnerrecords.count %>        Total cost: <%= generate_dinner_cost(@dinnerrecords) %></pre></h2>
 <table style="width:100%" class="table">
   <tr>
     <th>Year</th>

@@ -1,0 +1,27 @@
+<% unless @expenserecords.nil? %>
+  <h2>Expenses</h2>
+  <h2><pre>Total cost: <%= get_total_expense(@expenserecords) %></pre></h2>
+  <table style="width:100%" class="table">
+
+    <tr>
+      <th>Year</th>
+      <th>Month</th>
+      <th>Day</th>
+      <th>Item</th>
+      <th>Quantity</th>
+      <th>Cost(Tk)</th>
+    </tr>
+
+    <% @expenserecords.each do |expense| %>
+      <tr>
+        <td><%= expense.year %></td>
+        <td><%= expense.month %></td>
+        <td><%= expense.day %></td>
+        <td><%= expense.item %></td>
+        <td><%= expense.quantity %></td>
+        <td><%= expense.cost %></td>
+      </tr>
+    <% end %>
+
+  </table>
+<% end %>

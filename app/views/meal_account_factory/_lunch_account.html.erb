@@ -1,7 +1,6 @@
 <% unless @lunchrecords.nil? %>
 <h2><b><u><i><%= yield(:lunch_record_title) %></i></u></b></h2>
-<h2>Total: <%= @lunchrecords.count %></h2>
-<h2>Total cost: <%= generate_cost(@lunchrecords) %></h2>
+  <h2><pre>Total: <%= @lunchrecords.count %>           Total cost: <%= generate_lunch_cost(@lunchrecords) %></pre></h2>
 <table style="width:100%" class="table">
   <tr>
     <th>Year</th>
