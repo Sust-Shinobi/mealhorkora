@@ -6,7 +6,6 @@
 <nav>
 
 <ul class="nav navbar-nav navbar-right">
-    <li><%= Time.now.strftime("%d %B %Y")%></li>
     <% if !logged_in? %>
     <li><%= link_to "Home", root_path %></li>
     <li><%= link_to "SignIn", signin_path %></li>

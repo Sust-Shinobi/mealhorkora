@@ -11,22 +11,22 @@
     </section>
     <div class="container">
       <div class="col-md-4">
-        <h4><b>User-info</b></h4>
-        <h4>email: <%= @user.email %></h4>
-        <h4>Phone_no: <%= @user.phone_no %></h4>
-        <h4>Religion: <%= @user.religion %></h4>
-        <h4>Profession: <%= @user.profession %></h4>
-        <h4>Date_of_birth: <%= @user.date_of_birth %></h4>
-        <h4>Address: <%= @user.address %></h4>
+        <h3><i><b>User Info</b></i></h3><br/>
+        <h4><b>Email:</b> <%= @user.email %></h4>
+        <h4><b>Phone no:</b> <%= @user.phone_no %></h4>
+        <h4><b>Religion:</b> <%= @user.religion %></h4>
+        <h4><b>Profession:</b> <%= @user.profession %></h4>
+        <h4><b>Date of birth:</b> <%= @user.date_of_birth %></h4>
+        <h4><b>Address:</b> <%= @user.address %></h4>
       </div>
       <div class="col-md-4">
-        <h4><b>Account</b></h4>
-        <h4>Account balance: <%= @user.balance %></h4>
-        <h4>Expense this month: <%= generate_cost_for(@user) %></h4>
-        <h4>Total meals taken(this month): <%= Lunch.where(:user_id => @user.id).count + Dinner.where(:user_id => @user.id).count %></h4>
+        <h3><i><b>Account</b></i></h3><br/>
+        <h4><b>Account balance:</b> <%= @user.balance %></h4>
+        <h4><b>Expense this month:</b> <%= generate_cost_for(@user) %></h4>
+        <h4><b>Meals on this month:</b> <%= Lunch.where(:user_id => @user.id).count + Dinner.where(:user_id => @user.id).count %></h4>
       </div>
       <div class="col-md-4">
-        <h4><b>Preferences</b></h4>
+        <h3><b><i>Preferences</i></b></h3><br/>
         <%= render @preferrences %>
       </div>
     </div>

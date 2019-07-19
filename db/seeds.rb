@@ -6,20 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!(name:  "Example User",
-    email: "example@railstutorial.org",
+User.create!(name:  "Koushik Sarkar Seemanto",
+    email: "koushik@gmail.com",
     password:              "password",
     password_confirmation: "password",
-    city: "Example City",
-    profession: "Example Job",
-    address: "Example Address",
-    phone_no: "0151515151",
-    religion: "Example Religion",
+    city: "Bogra",
+    profession: "Works at Student",
+    address: "Lakecity, Neharipara, Sylhet",
+    phone_no: "01843405088",
+    religion: "Hindu",
     superuser: true)
 
 99.times do |n|
 name  = Faker::Name.name
-email = "example-#{n+1}@railstutorial.org"
+email = "test-#{n+1}@gmail.com"
 password = "password"
 birthday = Faker::Date.birthday
 city = Faker::Book.title

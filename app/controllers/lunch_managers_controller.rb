@@ -15,10 +15,16 @@ class LunchManagersController < ApplicationController
             params[:lunch][:day] = time.first
             params[:lunch][:month] = time.second
             params[:lunch][:year] = time.third
-            lunch.update_attributes(lunch_params)
-            user.update_balance(user.balance - LunchMeal.find(lunch_meal_id).cost)
-            user.save
-            redirect_back_or lunch_manager_path
+            if lunch.update_attributes(lunch_params)
+                if user.balance.nil?
+                user.update_balance(-LunchMeal.find(lunch_meal_id).cost)                    
+                else
+                user.update_balance(user.balance-LunchMeal.find(lunch_meal_id).cost)
+                end
+                user.save
+                redirect_back_or lunch_manager_path
+            end
+
         end
 
     end
@@ -31,7 +37,8 @@ class LunchManagersController < ApplicationController
         @lunch_meals = LunchMeal.all
     end
 
-    def new_meal
+    def new_end
+        meal
         @lunch_meal = LunchMeal.new
     end
 
