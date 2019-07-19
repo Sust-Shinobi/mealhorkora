@@ -1,6 +1,6 @@
 <% provide(:title, @user.name) %>
 <% if need_balance?(@user) && current_user?(@user)%>
-  <% flash[:danger] = "You need to recharge first" %>
+  <% flash[:danger] = "Your account balance is insufficient,please recharge" %>
 <% end %>
 <div class="row">
     <section class="user_info">
@@ -33,4 +33,10 @@
         <%= render @preferrences %>
       </div>
     </div>
+  <% if current_user.superuser? %>
+  <div class="text-right">
+    <%= button_to "Update balance", update_balance_path, method: :get, class: 'btn btn-primary'%>
+  </div>
+ <% end %>
+
 </div>
