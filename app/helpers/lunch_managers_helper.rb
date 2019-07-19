@@ -8,7 +8,7 @@ module LunchManagersHelper
         meal.any?
     end
 
-    def generate_cost(lunchrecords)
+    def generate_lunch_cost(lunchrecords)
         cost = 0
         lunchrecords.each do |lunch|
             cost += lunch.lunch_meal.cost

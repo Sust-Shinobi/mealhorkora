@@ -17,7 +17,7 @@ class LunchManagersController < ApplicationController
             params[:lunch][:year] = time.third
             if lunch.update_attributes(lunch_params)
                 if user.balance.nil?
-                user.update_balance(-LunchMeal.find(lunch_meal_id).cost)                    
+                user.update_balance(-LunchMeal.find(lunch_meal_id).cost)
                 else
                 user.update_balance(user.balance-LunchMeal.find(lunch_meal_id).cost)
                 end
@@ -37,8 +37,7 @@ class LunchManagersController < ApplicationController
         @lunch_meals = LunchMeal.all
     end
 
-    def new_end
-        meal
+    def new_meal
         @lunch_meal = LunchMeal.new
     end
 
