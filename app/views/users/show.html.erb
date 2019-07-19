@@ -1,4 +1,7 @@
 <% provide(:title, @user.name) %>
+<% if need_balance?(@user) && current_user?(@user)%>
+  <% flash[:danger] = "You need to recharge first" %>
+<% end %>
 <div class="row">
     <section class="user_info">
       <h1>

@@ -29,6 +29,15 @@ module UsersHelper
     cost
   end
 
+  def need_balance?(user)
+    if user.balance.nil?
+      return true
+    elsif user.balance<300
+      return true
+    end
+    return false
+  end
+
 
   private
 

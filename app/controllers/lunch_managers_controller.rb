@@ -35,7 +35,6 @@ class LunchManagersController < ApplicationController
     def destroy
     end
 
-
     def show_meal
         @lunch_meals = LunchMeal.all
     end
