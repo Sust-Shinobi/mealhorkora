@@ -15,9 +15,21 @@ class DinnerManagersController < ApplicationController
             params[:dinner][:month] = time.second
             params[:dinner][:year] = time.third
             params[:dinner][:haddinner] = true
-            dinner.update_attributes(dinner_params)
-            redirect_back_or dinner_manager_path
+            if !user.balance.nil?
+                if user.balance>300
+                    if dinner.update_attributes(dinner_params)
+                        user.update_balance(user.balance-DinnerMeal.find(dinner_meal_id).cost)
+                        flash[:success] = "Dinner confirmed"
+                    end
+                else
+                    flash[:danger] = "Insufficient account balance"
+                end
+            else
+                flash[:danger] = "Insufficient account balance"
+            end
+
         end
+        redirect_back_or dinner_manager_path
     end
 
     def destroy

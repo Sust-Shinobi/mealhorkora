@@ -3,20 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c8d91b32-75ea-436b-a29a-19360db729f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/lunch_managers_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/lunch_managers_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/managers_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/managers_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/dinner_managers_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/dinner_managers_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/lunch_managers_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/lunch_managers_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/managers/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/managers/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/meal_account_factory/_dinner_account.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/meal_account_factory/_dinner_account.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/meal_account_factory/_lunch_account.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/meal_account_factory/_lunch_account.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20190718092619_add_balance_to_users.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190717125131_add_balance_to_users.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/dinner_managers_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/dinner_managers_controller.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -34,22 +21,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/meal_account_factory_controller.rb">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/dinner_managers_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="21" column="69" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
+            <state relative-caret-position="552">
+              <caret line="24" column="67" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/dinner_managers_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/app/controllers/lunch_meals_controller.rb">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -75,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/meal_account_factory/_lunch_account.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="46">
-              <caret line="2" column="74" selection-start-line="2" selection-start-column="74" selection-end-line="2" selection-end-column="74" />
+              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -94,11 +77,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/lunch_managers_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1150">
-              <caret line="50" column="7" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
+            <state relative-caret-position="1079">
+              <caret line="54" column="7" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -163,7 +146,6 @@
         <option value="$PROJECT_DIR$/app/views/dinner_meals/_dinner_meal.html.erb" />
         <option value="$PROJECT_DIR$/app/views/dinner_managers/new_meal.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/dinner_managers_controller.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
@@ -175,6 +157,7 @@
         <option value="$PROJECT_DIR$/app/views/meal_account_factory/_lunch_account.html.erb" />
         <option value="$PROJECT_DIR$/app/helpers/lunch_managers_helper.rb" />
         <option value="$PROJECT_DIR$/app/controllers/lunch_managers_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/dinner_managers_controller.rb" />
       </list>
     </option>
   </component>
@@ -199,6 +182,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -412,7 +396,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -547,7 +530,8 @@
       <workItem from="1562942340671" duration="1805000" />
       <workItem from="1563195963695" duration="2465000" />
       <workItem from="1563355589683" duration="1360000" />
-      <workItem from="1563489719902" duration="1681000" />
+      <workItem from="1563489719902" duration="1932000" />
+      <workItem from="1563515537639" duration="4790000" />
     </task>
     <task id="LOCAL-00001" summary="Applied Factory Pattern">
       <created>1562931304636</created>
@@ -612,17 +596,24 @@
       <option name="project" value="LOCAL" />
       <updated>1563356432822</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update">
+      <created>1563491585892</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1563491585892</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46357000" />
+    <option name="totallyTimeSpent" value="51398000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="27" width="1850" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28713968" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21452329" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -635,7 +626,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3294702" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.24536532" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.075245366" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -649,10 +640,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Applied Factory Pattern" />
     <MESSAGE value="SQL Query Update" />
-    <MESSAGE value="update" />
     <MESSAGE value="preference" />
     <MESSAGE value="Filter Reports" />
-    <option name="LAST_COMMIT_MESSAGE" value="Filter Reports" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/template@Development__template.rcov" NAME="Development: template Coverage Results" MODIFIED="1563188395307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="template" />
@@ -867,9 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/lunch_meals_controller.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/dinner_meals/_dinner_meal.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -928,7 +916,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/meal_account_factory/_lunch_account.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
-          <caret line="2" column="74" selection-start-line="2" selection-start-column="74" selection-end-line="2" selection-end-column="74" />
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -939,6 +927,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/concerns/.keep">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/meal_account_factory/_dinner_account.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -946,20 +937,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/concerns/.keep">
+    <entry file="file://$PROJECT_DIR$/app/controllers/lunch_meals_controller.rb">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dinner_managers_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/lunch_managers_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1150">
-          <caret line="50" column="7" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
+        <state relative-caret-position="1079">
+          <caret line="54" column="7" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dinner_managers_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" column="67" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
         </state>
       </provider>
     </entry>
