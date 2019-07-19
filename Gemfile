@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.5'
+ruby '2.5.3'
 
 # Secure Password
 gem 'bcrypt'
@@ -10,6 +10,8 @@ gem 'bootstrap-sass', '~> 3.4.1'
 gem 'jquery-rails'
 gem 'will_paginate'
 gem 'faker'
+gem 'ransack'
+gem 'datatables'
 
 #Image Upload
 gem 'carrierwave'

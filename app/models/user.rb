@@ -31,5 +31,6 @@ class User < ApplicationRecord
     def update_balance(new_balance)
         self.balance = new_balance
     end
+
     
 end
