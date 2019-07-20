@@ -1,0 +1,9 @@
+<% @lunch_meals.each do |lunch| %>
+  <ul class="users">
+    <li>
+      <h4 style="text-align: center;">Items: <%= lunch.items %>    <%= link_to "edit", "#" %> | <%= link_to "delete", "#" %></h4>
+      <h4 style="text-align: center;">Cost: <%= lunch.cost %>    </h4>
+    </li>
+  </ul>
+
+<% end %>

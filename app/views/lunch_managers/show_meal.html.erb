@@ -1,1 +1,6 @@
-<%= render @lunch_meals %>
+<% @lunch_meals.each do |lunch| %>
+
+  <h4><pre>Items: <%= lunch.items %>    <%= link_to "edit", "#" %></pre></h4>
+  <h4><pre>Cost: <%= lunch.cost %>    <%= link_to "delete", "#" %></pre></h4>
+
+<% end %>

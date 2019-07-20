@@ -1,6 +1,6 @@
 <%= form_for(@preferrence) do |f| %>
-  <div class="center jumbotron">
-    <%= f.text_area :disliked_item, placeholder: "Item you dislike..." %>
+  <div class="row">
+    <%= f.text_field :disliked_item, placeholder: "Item you dislike..." %>
     <%= f.submit "Add", class: "btn btn-primary" %>
   </div>
 <% end %>

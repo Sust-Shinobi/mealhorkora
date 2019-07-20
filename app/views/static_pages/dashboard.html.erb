@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-md-4">
     <ul class="list-group">
-      <li class="list-group-item"><%= link_to "]Add to Disliked List", preference_path %></li>
+      <li class="list-group-item"><%= link_to "Add to Disliked List", preference_path %></li>
       <li class="list-group-item"><%= link_to "Meal status", status_path %></li>
         <% if !current_user.superuser? %>
         <li class="list-group-item"><%= link_to "Reports", reports_path %></li>
@@ -17,6 +17,7 @@
         <li class="list-group-item"><%= link_to "Show expenses", show_expense_path %></li>
         <li class="list-group-item"><%= link_to "Refill User Balance", update_balance_path %></li>
         <li class="list-group-item"><%= link_to "Revenues", revenues_path %></li>
+
 
         <% end %>
     </ul>
