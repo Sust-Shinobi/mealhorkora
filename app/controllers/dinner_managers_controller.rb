@@ -19,6 +19,7 @@ class DinnerManagersController < ApplicationController
                 if user.balance>300
                     if dinner.update_attributes(dinner_params)
                         user.update_balance(user.balance-DinnerMeal.find(dinner_meal_id).cost)
+                        user.save!
                         flash[:success] = "Dinner confirmed"
                     end
                 else
@@ -48,6 +49,7 @@ class DinnerManagersController < ApplicationController
 
     def new_meal
         @dinner_meal = DinnerMeal.new
+        @dinner_meals = DinnerMeal.all
     end
 
     private

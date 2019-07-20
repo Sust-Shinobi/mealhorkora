@@ -31,8 +31,12 @@ Rails.application.routes.draw do
 
   get  '/create_new_lunch_menu',    to: 'lunch_managers#new_meal'
   post '/create_new_lunch_menu' ,   to: 'lunch_managers#create_meal'
+  get '/edit_lunch_menu',           to: 'lunch_managers#edit'
+  # patch '/edit_lunch_menu',         to: 'lunch_managers#update'
+  # delete '/delete_lunch_menu',      to: 'lunch_managers#destroy'
   get  '/create_new_dinner_menu',   to: 'dinner_managers#new_meal'
   post '/create_new_dinner_menu',   to: 'dinner_managers#create_meal'
+  get '/edit_dinner_menu',          to: 'dinner_managers#edit'
   resources :users
   resources :preferrences, only: [:create, :destroy]
   resources :expenses

@@ -9,7 +9,9 @@ class ManagersController < ApplicationController
     def setbalance
         user = User.find_by_email(params[:balance][:email])
         bp = balance_params
-        bp[:balance] = user.balance + bp[:balance].to_i
+        unless user.balance.nil?
+            bp[:balance] = user.balance + bp[:balance].to_i
+        end
         user.update_attributes(bp)
         user.save!
         redirect_to user
