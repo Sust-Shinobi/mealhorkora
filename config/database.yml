@@ -50,6 +50,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  database: template_production
+  adapter: postgresql
+  database: template_database_production
   username: template
-  password: <%= ENV['TEMPLATE_DATABASE_PASSWORD'] %>
+  password:
