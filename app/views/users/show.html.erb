@@ -26,7 +26,7 @@
         <h3><i><b>Account</b></i></h3><br/>
         <h4><b>Account balance:</b> <%= @user.balance %></h4>
         <h4><b>Expense this month:</b> <%= generate_cost_for(@user) %></h4>
-        <h4><b>Meals on this month:</b> <%= Lunch.where(:user_id => @user.id).count + Dinner.where(:user_id => @user.id).count %></h4>
+        <h4><b>Meals on this month:</b> <%= count_meal_for(@user) %></h4>
       </div>
       <div class="col-md-4">
         <h3><b><i>Preferences</i></b></h3><br/>

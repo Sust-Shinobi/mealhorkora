@@ -1,7 +1,32 @@
 module RevenuesHelper
 
-    def get_expenses(year)
-        Expense.where(year: year).sum(:cost)
+    def get_expenses_quarter(year,quarter)
+        cost = 0
+        (quarter*3-2..quarter*3).each do |i|
+            cost += Expense.where(year: year, month: Date::MONTHNAMES[i]).sum(:cost)
+        end
+        cost
+    end
+
+    def get_expenses_year(year)
+        cost = Expense.where(year: year).sum(:cost)
+        cost
+    end
+
+    def get_sales_quarter(year,quarter)
+        cost = 0
+        (quarter*3-2..quarter*3).each do |i|
+            cost += cost_for_lunch(Lunch.where(year: year, month: Date::MONTHNAMES[i]))
+            cost += cost_for_dinner(Dinner.where(year: year, month: Date::MONTHNAMES[i]))
+        end
+        cost
+    end
+
+    def get_sales_year(year)
+        lunches = Lunch.where(year: year)
+        dinners = Dinner.where(year: year)
+        cost = cost_for_lunch(lunches) + cost_for_dinner(dinners)
+        cost    
     end
 
     def rev_from_meal(year)

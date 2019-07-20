@@ -42,3 +42,48 @@ User.create!(name:  name,
       balance: 0,
       takes_dinner: true )
 end
+
+LunchMeal.create!(items: "Rice, Daal, Fish, Vegetable ",cost: 40)
+LunchMeal.create!(items: "Rice, Daal, Chicken, Vegetable ",cost: 40)
+LunchMeal.create!(items: "Rice, Daal, Egg, Vegetable ",cost: 40)
+LunchMeal.create!(items: "Special Meal@70tk", cost: 70)
+
+(2018..2018).each do |year|
+    (1..12).each do |month|
+        month = Date::MONTHNAMES[month]
+        (1..5).each do |day|
+            day = rand(1..30)
+            user_id = rand(1..10)
+            Lunch.create!(
+                user_id: user_id,
+                year: year,
+                month: month,
+                day: day,
+                lunch_meal_id: day%4+1
+            )
+        end
+    end
+end
+
+DinnerMeal.create!(items: "Rice, Daal, Fish, Vegetable ", cost: 40)
+DinnerMeal.create!(items: "Rice, Daal, Chicken, Vegetable ", cost: 40)
+DinnerMeal.create!(items: "Rice, Daal, Egg, Vegetable ", cost: 40)
+DinnerMeal.create!(items: "Special Meal@70tk",cost: 70)
+
+(2018..2018).each do |year|
+  (1..12).each do |month|
+    month = Date::MONTHNAMES[month]
+    (1..5).each do |day|
+      day = rand(1..30)
+      user_id = rand(1..10)
+      Dinner.create!(
+          user_id: user_id,
+          year: year,
+          month: month,
+          day: day,
+          dinner_meal_id: day%4+1
+      )
+    end
+  end
+end
+

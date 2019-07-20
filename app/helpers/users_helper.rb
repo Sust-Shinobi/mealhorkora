@@ -13,6 +13,14 @@ module UsersHelper
     cost = cost_for_lunch(lunches) + cost_for_dinner(dinners)
   end
 
+  def count_meal_for(user)
+    year = Time.now.year
+    month = Date::MONTHNAMES[Time.now.month]
+    lunch = Lunch.where(:user_id => user.id, month: month, year: year).count
+    dinners = Dinner.where(:user_id => user.id, month: month, year: year).count
+    lunch + dinners
+  end
+
   def cost_for_lunch(meals)
     cost = 0
     meals.each do |meal|
