@@ -11,6 +11,7 @@ class ManagersController < ApplicationController
         bp = balance_params
         unless user.balance.nil?
             bp[:balance] = user.balance + bp[:balance].to_i
+            flash[:success] = "Balance has been refilled!"
         end
         user.update_attributes(bp)
         user.save!

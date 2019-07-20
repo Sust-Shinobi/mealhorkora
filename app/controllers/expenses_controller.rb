@@ -12,6 +12,7 @@ class ExpensesController < ApplicationController
     month = Date::MONTHNAMES[params[:expenses]["date(2i)"].to_i]
     day = params[:expenses]["date(3i)"].to_i
     Expense.create!(item: item, quantity: quantity, cost: cost, year: year, month: month, day: day)
+    flash[:success] = "It has been saved!"
     redirect_to add_expense_path
   end
 

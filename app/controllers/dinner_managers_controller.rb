@@ -44,6 +44,7 @@ class DinnerManagersController < ApplicationController
         items = params[:dinner_meal][:items]
         cost = params[:dinner_meal][:cost]
         DinnerMeal.create!(items: items, cost: cost)
+        flash[:success] = "New dinner menu created!"
         redirect_to dinner_manager_path
     end
 
