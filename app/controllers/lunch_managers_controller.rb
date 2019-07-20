@@ -34,6 +34,9 @@ class LunchManagersController < ApplicationController
     end
 
     def destroy
+        # LunchMeal.find(params[:lunch_meal][:lunch_id]).destroy
+        # flash[:success] = "Meal deleted!"
+        # redirect_to create_new_lunch_menu_path
     end
 
     def new_meal
@@ -41,10 +44,25 @@ class LunchManagersController < ApplicationController
         @lunch_meals = LunchMeal.all
     end
 
+    def edit
+        # @lunch_meal = LunchMeal.find(params[:lunch_meal][:lunch_id])
+    end
+
+    def update
+        # @lunch_meal = LunchMeal.find(params[:lunch_meal][:lunch_id])
+        # if @lunch_meal.update_attributes(:lunch_meal)
+        #     flash[:success] = "Meal updated!"
+        #     redirect_to create_new_lunch_menu_path
+        # else
+        #     redirect_to 'edit'
+        # end
+    end
+
     def create_meal
         items = params[:lunch_meal][:items]
         cost = params[:lunch_meal][:cost]
         LunchMeal.create!(items: items, cost: cost)
+        flash[:success] = "New lunch menu created!"
         redirect_to lunch_manager_path
     end
 

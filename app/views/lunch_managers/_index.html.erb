@@ -1,8 +1,11 @@
 <% @lunch_meals.each do |lunch| %>
+  <%#= lunch.hidden_field :lunch_id, value: lunch.id %>
   <ul class="users">
     <li>
-      <h4 style="text-align: center;">Items: <%= lunch.items %>    <%= link_to "edit", "#" %> | <%= link_to "delete", "#" %></h4>
-      <h4 style="text-align: center;">Cost: <%= lunch.cost %>    </h4>
+      <h4 style="text-align: center;">Items: <%= lunch.items %>    <%= link_to "edit", edit_lunch_menu_path %>
+        | <%= link_to "delete", "#"%></h4>
+      <h4 style="text-align: center;">Cost: <%= lunch.cost %></h4>
+
     </li>
   </ul>
 

@@ -33,4 +33,10 @@
         <%= render @preferrences %>
       </div>
     </div>
+  <% if @user.superuser? %>
+  <div class="text-right">
+    <%= button_to "Refill balance", update_balance_path, method: :get, class: 'btn btn-primary' %>
+  </div>
+  <% end %>
+
 </div>

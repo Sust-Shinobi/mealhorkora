@@ -4,19 +4,19 @@
 </style>
 
 <div class="row">
-    <%= form_for(:lunch_meal,url: create_new_lunch_menu_path) do |f| %>
+  <%= form_for(:lunch_meal,url: create_new_lunch_menu_path) do |f| %>
     <div class="col-md-5">
-        <%= f.label :items %>
-        <%= f.text_field :items, class: 'form-control'%>
-        <br/>
-        <%= f.label :cost %>
-        <%= f.number_field :cost, class: 'form-control' %>    
-        <span class="picture">
+      <%= f.label :items %>
+      <%= f.text_field :items, class: 'form-control'%>
+      <br/>
+      <%= f.label :cost %>
+      <%= f.number_field :cost, class: 'form-control' %>
+      <span class="picture">
         <%= f.file_field :picture %>
         </span>
-        <%= f.submit "Add lunch", disable_with: 'Submiting...', action: "create_meal", class: "btn btn-danger" %>
+      <%= f.submit "Add lunch", disable_with: 'Submiting...', action: "create_meal", class: "btn btn-danger" %>
     </div>
-    <% end %>
+  <% end %>
   <div class="col-md-7">
     <h3 style="text-align: center;">Lunch Meals</h3>
     <%= render 'index' %>

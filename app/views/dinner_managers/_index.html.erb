@@ -1,0 +1,11 @@
+<% @dinner_meals.each do |dinner| %>
+  <ul class="users">
+    <li>
+      <h4 style="text-align: center;">Items: <%= dinner.items %>    <%= link_to "edit", edit_dinner_menu_path %>
+        | <%= link_to "delete", "#" %></h4>
+      <h4 style="text-align: center;">Cost: <%= dinner.cost %>    </h4>
+
+    </li>
+  </ul>
+
+<% end %>

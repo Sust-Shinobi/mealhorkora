@@ -18,7 +18,7 @@ User.create!(name:  "Koushik Sarkar Seemanto",
     religion: "Hindu",
     superuser: true)
 
-10.times do |n|
+35.times do |n|
 name  = Faker::Name.name
 email = "test-#{n+1}@gmail.com"
 password = "password"
