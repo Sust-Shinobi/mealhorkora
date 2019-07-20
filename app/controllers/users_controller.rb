@@ -39,7 +39,12 @@ class UsersController < ApplicationController
     end
 
     def index
-        @users = User.paginate(page: params[:page])
+         # @users = User.paginate(page: params[:page])
+         @users = if params[:term]
+                      User.where('name LIKE ?', "%#{params[:term]}%").paginate(page: params[:page])
+                  else
+                      User.paginate(page: params[:page])
+                  end
     end
 
     def show
@@ -51,7 +56,7 @@ class UsersController < ApplicationController
 
     def user_params
         params.require(:user).permit(:name, :email, :password, :password_confirmation, :city,
-                                     :address, :religion, :date_of_birth, :profession, :phone_no)
+                                     :address, :religion, :date_of_birth, :profession, :phone_no, :term)
     end
 
     def logged_in_user

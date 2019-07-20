@@ -12,6 +12,7 @@ gem 'will_paginate'
 gem 'faker'
 gem 'ransack'
 gem 'datatables'
+gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
 
 #Image Upload
 gem 'carrierwave'
