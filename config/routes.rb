@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/revenues',                  to: "revenues#new"
   root 'static_pages#home'
   get '/status',                    to:"static_pages#status"
   post '/status',                   to:"status#update"
