@@ -50,6 +50,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
+  host: postgres://ndxpfgvyzphheh:f9204485bcd69625392b269d2c377f03b6b12558ed34cb88ceed3026e9bc84c5@ec2-174-129-41-127.compute-1.amazonaws.com:5432/dch2u1np9ie7am
   adapter: postgresql
   database: template_database_production
   username: template
